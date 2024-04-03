@@ -4,6 +4,15 @@
 
 @section('content') 
     <h1>Contact page</h1>
+    @if ($errors->any())
+       <div class="alert alert-danger">
+        <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach    
+        </ul>    
+    </div> 
+    @endif
     @include('includes.header')
     <form action="{{route('contact-form') }}" method="POST">
         @csrf
