@@ -39,3 +39,6 @@ Route::get('/conference-create',static function(){return view('conference');})->
 Route::post('/conference-create/submit', [ConferenceController::class,'submit'])->name('conference-form');
 Route::get('/conference/list', [ConferenceController::class,'allData'])->name('conference-data');
 Route::get('/conference/list/{id}', [ConferenceController::class,'oneConference'])->name('conference-data-one');
+Route::get('/conference/list/{id}/update', [ConferenceController::class,'updateConference'])->name('conference-update');
+Route::post('/conference/list/{id}/update', [ConferenceController::class,'updateConferenceSubmit'])->name('conference-update-submit');
+Route::get('/conference/list/{id}/delete', [ConferenceController::class,'deleteConference'])->name('conference-delete');
