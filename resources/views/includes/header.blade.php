@@ -6,7 +6,7 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="{{route('home')}}" class="nav-link px-2 text-white">Home</a></li>
+          <li><a href="{{route('mainpage')}}" class="nav-link px-2 text-white">Home</a></li>
           <li><a href="{{route('contact')}}" class="nav-link px-2 text-white">Contact</a></li>
           <li><a href="{{route('contact-data')}}" class="nav-link px-2 text-white">All messages</a></li>
           <li><a href="{{route('conference-data')}}" class="nav-link px-2 text-white">All conferences</a></li>
@@ -17,11 +17,20 @@
           <input type="search" class="form-control form-control-dark text-bg-white" placeholder="Search..." aria-label="Search">
         </form>
 
+        @guest
         <div class="text-end">
-          <a href="{{route('login')}}">
+          <a href="{{route('login-form')}}">
             <button type="button" class="btn btn-outline-light me-2">Login</button>
           </a>
         </div>
+        @else
+        <div class="text-end">
+          <a href="{{route('logout')}}">
+            <button type="button" class="btn btn-outline-light me-2">Logout</button>
+          </a>
+        </div>
+        @endguest
+
       </div>
     </div>
   </header>

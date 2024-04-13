@@ -23,7 +23,7 @@ class ContactController extends Controller
 
        $contact -> save();
 
-       return redirect()->route('home')->with('success','Message sent successfully!');
+       return redirect()->route('mainpage')->with('success','Message sent successfully!');
     }
 
     public function allData(){

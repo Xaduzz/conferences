@@ -21,6 +21,8 @@
         
     @endif
     @include('includes.header')
+    
+    @guest
     <form action="{{route('conference-form') }}" method="POST">
         @csrf
         <div class="form-group">
@@ -38,8 +40,26 @@
             <textarea name="content" id="content" placeholder="Write description here..." cols="30" rows="10"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-success">Sent</button>
+        <div class="form-group">
+            <label for="date">•</label>
+            <input type="text" name="date" placeholder="format: yyyy-mm-dd" id="date">
+        </div>
+
+        <div class="form-group">
+            <label for="address">•</label>
+            <input type="text" name="address" placeholder="Write address here" id="address">
+        </div>
+
+        <div class="form-group">
+            <label for="country">•</label>
+            <input type="text" name="country" placeholder="Write hosting country here.." id="country">
+        </div>
+    @else
+    <button type="submit" class="btn btn-success">Sent</button>
     </form>
+    @endguest
+
+    
     
     
 @endsection    

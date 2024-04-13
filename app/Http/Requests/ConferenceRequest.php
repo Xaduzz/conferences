@@ -25,14 +25,20 @@ class ConferenceRequest extends FormRequest
         return [
             'title'=>'required',
             'content'=>'required',
-            'photolink'=>'required'
+            'photolink'=>'required',
+            'date'=>'required',
+            'address'=>'required|min: 8',
+            'country'=>'required|min: 5'
         ];
     }
     public function messages(){
         return [
             'title.required'=>"Name is required!",
             'content.required'=>"Email is required!",
-            'photolink.required'=>"Photo is required!"
+            'photolink.required'=>"Photo is required!",
+            'date.required'=>'Date must be entered!',
+            'address.required'=>'Conference address is required!',
+            'country.required'=>'Hosting country is required!'
         ];
     }
 }

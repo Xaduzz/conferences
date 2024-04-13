@@ -3,7 +3,9 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ConferenceController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-})->name("home");
+})->name("mainpage");
 
 Route::get('/contact',static function(){
     return view('contact');
@@ -42,3 +44,10 @@ Route::get('/conference/list/{id}', [ConferenceController::class,'oneConference'
 Route::get('/conference/list/{id}/update', [ConferenceController::class,'updateConference'])->name('conference-update');
 Route::post('/conference/list/{id}/update', [ConferenceController::class,'updateConferenceSubmit'])->name('conference-update-submit');
 Route::get('/conference/list/{id}/delete', [ConferenceController::class,'deleteConference'])->name('conference-delete');
+
+
+Route::get('/login',[LoginController::class,'showLoginForm'])->name('login-form');
+Route::post('/login',[LoginController::class,'login'])->name('login');
+Route::post('/logout',[LoginController::class,'logout'])->name('logout');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

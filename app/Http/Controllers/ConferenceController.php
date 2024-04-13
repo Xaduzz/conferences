@@ -19,6 +19,9 @@ class ConferenceController extends Controller
         $conference -> title = $request ->input('title');
         $conference -> photolink = $request ->input('photolink');
         $conference -> content = $request ->input('content');
+        $conference -> conference_date = $request -> input('date');
+        $conference -> address = $request ->input('address');
+        $conference -> country = $request ->input('country');
  
         $conference -> save();
  
@@ -51,14 +54,17 @@ class ConferenceController extends Controller
         $conference -> title = $request ->input('title');
         $conference -> photolink = $request ->input('photolink');
         $conference -> content = $request ->input('content');
+        $conference -> conference_date = $request -> input('date');
+        $conference -> address = $request ->input('address');
+        $conference -> country = $request ->input('country');
  
         $conference -> save();
  
-        return redirect()->route('home')->with('success','Conference updated successfully!');
+        return redirect()->route('mainpage')->with('success','Conference updated successfully!');
      }
 
      public function deleteConference($id){
         Conference::find($id)->delete();
-        return redirect()->route('conference-data')->with('success','Conference deleted successfully!');
+        return redirect()->route('conference-data')->with('success','C deleted successfully!');
      }
 }
