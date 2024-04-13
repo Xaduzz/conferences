@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title','Home')
+@section('title','message update')
 
 @section('content') 
-    <h1>Contact page</h1>
+    <h1>Message Update</h1>
     @if ($errors->any())
        <div class="alert alert-danger">
         <ul>
@@ -21,28 +21,28 @@
         
     @endif
     @include('includes.header')
-    <form action="{{route('contact-form') }}" method="POST">
+    <form action="{{route('contact-update-submit', $data->id) }}" method="POST">
         @csrf
         <div class="form-group">
             <label for="name">•</label>
-            <input type="text" name="name" placeholder="Name" id="name">
+            <input type="text" name="name" value="{{$data->name}}" placeholder="Name" id="name">
         </div>
     
         <div class="form-group">
             <label for="email">•</label>
-            <input type="text" name="email" placeholder="example@mail.com" id="email">
+            <input type="text" name="email" value="{{$data->email}}" placeholder="example@mail.com" id="email">
         </div>
     
         <div class="form-group">
             <label for="Organization">•</label>
-            <input type="text" name="company" placeholder="Your Company" id="company">
+            <input type="text" name="company" value="{{$data->company}}" placeholder="Your Company" id="company">
         </div>
     
         <div class="form-group">
             <label for="message">•</label>
-            <textarea name="message" id="message" placeholder="Write here..." cols="30" rows="10"></textarea>
+            <textarea name="message" id="message" value="{{$data->message}}" placeholder="Write here..." cols="30" rows="10">{{$data->message}}</textarea>
         </div>
-        <button type="submit" class="btn btn-success">Sent</button>
+        <button type="submit" class="btn btn-success">Update</button>
     </form>
     
     

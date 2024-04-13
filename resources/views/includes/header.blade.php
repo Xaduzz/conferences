@@ -8,8 +8,8 @@
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="{{route('home')}}" class="nav-link px-2 text-white">Home</a></li>
           <li><a href="{{route('contact')}}" class="nav-link px-2 text-white">Contact</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="{{route('contact-data')}}" class="nav-link px-2 text-white">All messages</a></li>
+          <li><a href="{{route('conference-data')}}" class="nav-link px-2 text-white">All conferences</a></li>
           <li><a href="#" class="nav-link px-2 text-white">About</a></li>
         </ul>
 
@@ -18,8 +18,9 @@
         </form>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+          <a href="{{route('login')}}">
+            <button type="button" class="btn btn-outline-light me-2">Login</button>
+          </a>
         </div>
       </div>
     </div>
