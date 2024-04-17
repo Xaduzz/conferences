@@ -14,7 +14,11 @@
             <p>Address: {{$data->address}}</p>
             <p>Date: {{$data->conference_date}}</p>
             <p>Description: {{$data->content}}</p>
+            @guest
+            @else
             <a href="{{route('conference-update',$data->id)}}"><button class='btn btn-primary'>Update</button></a>
             <a href="{{route('conference-delete',$data->id)}}"><button class='btn btn-danger'>Delete</button></a>
+            @endguest
+
     </div>
 @endsection

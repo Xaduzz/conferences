@@ -16,8 +16,6 @@ return new class extends Migration
             $table->string('title');
             $table->string('photolink');
             $table->text('content')->nullable();
-            $table->date('conference_date');
-            $table->string('address');
             $table->timestamps();
         });
     }

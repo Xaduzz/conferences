@@ -22,7 +22,6 @@
     @endif
     @include('includes.header')
     
-    @guest
     <form action="{{route('conference-form') }}" method="POST">
         @csrf
         <div class="form-group">
@@ -54,10 +53,10 @@
             <label for="country">•</label>
             <input type="text" name="country" placeholder="Write hosting country here.." id="country">
         </div>
-    @else
+
     <button type="submit" class="btn btn-success">Sent</button>
     </form>
-    @endguest
+ 
 
     
     
