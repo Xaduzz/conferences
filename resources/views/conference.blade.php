@@ -51,7 +51,7 @@
 
         <div class="form-group">
             <label for="country">•</label>
-            <input type="text" name="country" placeholder="Write hosting country here.." id="country">
+            <input type="text" name="country" placeholder="hosting country" id="country">
         </div>
 
     <button type="submit" class="btn btn-success">Sent</button>

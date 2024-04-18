@@ -15,7 +15,6 @@
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="{{route('contact')}}" class="nav-link px-2 text-white">Contact</a></li>
           <li><a href="{{route('conference-data')}}" class="nav-link px-2 text-white">All conferences</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
         </ul>
         <div class="text-end">
           <a href="{{route('login-form')}}">
@@ -28,11 +27,11 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="{{route('mainpage')}}" class="nav-link px-2 text-white">Home</a></li>
+          <li><a href="{{route('mainpage')}}" class="nav-link px-2 text-white">AdminPanel</a></li>
           <li><a href="{{route('contact')}}" class="nav-link px-2 text-white">Contact</a></li>
           <li><a href="{{route('contact-data')}}" class="nav-link px-2 text-white">All messages</a></li>
           <li><a href="{{route('conference-data')}}" class="nav-link px-2 text-white">All conferences</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+          <!--<li><a href="#" class="nav-link px-2 text-white">About</a></li>-->
         </ul>
         <div class="text-end">
           <a href="{{route('logout')}}">

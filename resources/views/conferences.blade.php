@@ -5,7 +5,7 @@
 @include('includes.header')
 
 @section('content')
-    <h1>Conference page</h1>
+    <h1>Conferences</h1>
     @foreach ($data as $item)
         <div class="alert alert-info">
             <h3>{{ $item->title }}</h3>
