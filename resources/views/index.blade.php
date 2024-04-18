@@ -6,5 +6,10 @@
 
 @section('content')
     <h1>Home page</h1>
+    @guest
+        
+    @else
     <h1><a href="conference-create"><button class="btn btn-primary"></button>Create new conference</a></h1>
+    @endguest
+
 @endsection
